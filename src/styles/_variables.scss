@@ -30,7 +30,7 @@ $magenta: #F08BB4 !default;
 $red: #B40F0F !default;
 
 // 系统色
-$primary: $green !default;
+$primary: $blue !default;
 $success: $cyan !default;
 $info: $skyblue !default;
 $warning: $yellow !default;
@@ -86,16 +86,16 @@ $body-text-align: null !default;
 
 // padding
 
-$btn-padding-x-lg: 20px !default;
-$btn-padding-y-lg: 15px !default;
+$btn-padding-x-lg:20px !default;
+$btn-padding-y-lg: 12px !default;
 $btn-padding-x: 15px !default;
-$btn-padding-y: 12px !default;
+$btn-padding-y: 8px !default;
 $btn-padding-x-sm: 10px !default;
-$btn-padding-y-sm: 8px !default;
+$btn-padding-y-sm: 4px !default;
 
 //  border
 
-$btn-border: 1px solid !default;
+$btn-border-width: 1px !default;
 
 //  out-line
 
@@ -103,9 +103,9 @@ $btn-out-line: none !default;
 
 //  font-size
 
-$btn-font-size-lg: 1.25rem !default;
-$btn-font-size: 1rem !default;
-$btn-font-size-sm: .875rem !default;
+$btn-font-size-lg: 14px !default;
+$btn-font-size: 14px !default;
+$btn-font-size-sm: 12px !default;
 
 // font-weight
 
@@ -121,8 +121,18 @@ $btn-border-radius-lg: 6px !default;
 $btn-border-radius-sm: 3px !default;
 $btn-border-radius: 4px !default;
 
+$btn-background:$gray-2 !default;
+$btn-color:$gray-12 !default;
 
 
+$btn-margin-x-lg: 12px !default;
+$btn-margin-y-lg: 15px !default;
+$btn-margin-x: 10px !default;
+$btn-margin-y: 12px !default;
+$btn-margin-x-sm: 8px !default;
+$btn-margin-y-sm: 8px !default;
+
+$btn-disable-opacity: 0.35 !default;
 
 
 

@@ -25,32 +25,38 @@ export enum ButtonSize {
     Large = 'lg',
     Small = 'sm'
 }
-interface Iprops {
-    type: string;
-    size: string;
+interface IBaseButton {
+    buttonType?: string;
+    size?: string;
     disable?: boolean;
     link?: string
 }
-const Button: React.FC<Iprops> = (props) => {
+
+type IButtonPropsType = IBaseButton & React.ButtonHTMLAttributes<HTMLElement>
+type IAnchorPropsType =  IBaseButton & React.AnchorHTMLAttributes<HTMLElement>
+type IButtonType = Partial<IButtonPropsType & IAnchorPropsType>
+
+const Button: React.FC<IButtonType> = (props) => {
     const {
-        type,
+        buttonType,
         size,
         disable,
         link,
-        children
+        children,
+        ...restProps
     } = props;
     const classes = classnames('btn', {
-        [`btn-${type}`]: type,
+        [`btn-${buttonType}`]: buttonType,
         [`btn-${size}`]: size,
-        "disable": (type == ButtonType.Link) && disable
+        "disable": (buttonType === ButtonType.Link) && disable
     });
-    if (type === ButtonType.Link) {
+    if (buttonType === ButtonType.Link) {
         return (
-            <a className={classes} href={link}>{children}</a>
+            <a className={classes} {...restProps} href={link}>{children}</a>
         )
     } else {
         return (
-            <button className={classes} disabled={disable}>{children}</button>
+            <button className={classes} {...restProps} disabled={disable}>{children}</button>
         )
     }
 

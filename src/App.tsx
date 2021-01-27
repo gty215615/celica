@@ -4,10 +4,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button type={ButtonType.Primary} size={ButtonSize.Large}>大按钮</Button>
-        <Button type={ButtonType.Primary} size={ButtonSize.Small}>小按钮</Button>
-        <Button type={ButtonType.Primary} size={ButtonSize.Small} disable>小按钮</Button>
-        <Button type={ButtonType.Link} size={ButtonSize.Small} disable link='https://www.baidu.com/'>百度</Button>
+        <Button onClick={(e) => {
+          e.preventDefault(); 
+          console.log(1234);
+        }} buttonType={ButtonType.Primary} size={ButtonSize.Large}>大按钮</Button>
+        <Button  >default</Button>
+        <Button buttonType={ButtonType.Primary} size={ButtonSize.Small}>小按钮</Button>
+        <Button buttonType={ButtonType.Primary} size={ButtonSize.Small} disable>小按钮</Button>
+        <Button buttonType={ButtonType.Link} size={ButtonSize.Small} link='https://www.baidu.com/'>百度</Button>
+        <Button buttonType={ButtonType.Link} size={ButtonSize.Small} disable link='https://www.baidu.com/'>百度</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
