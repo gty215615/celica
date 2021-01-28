@@ -23,3 +23,14 @@
         color:  $hover-color;
     }
 }
+
+@mixin alert-type(
+    $btn-background,
+    $btn-color,  
+
+    ) {
+    background-color: $btn-background;
+    color: $btn-color;
+   
+ 
+}

@@ -137,3 +137,35 @@ $btn-disable-opacity: 0.35 !default;
 
 
 
+// Alert
+
+
+$alert-padding-x: 15px !default;
+$alert-padding-y: 4px !default;
+
+$alert-title-size:14px  !default;
+$alert-description-size:12px  !default;
+
+$alert-title-line-height:24px  !default;
+$alert-description-line-height:20px  !default;
+$alert-border-radius:4px  !default;
+
+
+$alert-success:$cyan !default;
+$alert-success-color:$gray-3 !default;
+
+
+$alert-default:$primary !default;
+$alert-default-color:$gray-3 !default;
+
+
+$alert-danger:$danger !default;
+$alert-danger-color:$gray-3 !default;
+
+
+$alert-info:$info !default;
+$alert-info-color:$gray-3 !default;
+
+$alert-warning:$warning !default;
+$alert-warning-color:$gray-3 !default;
+$alert-margin-y:12px !default;
