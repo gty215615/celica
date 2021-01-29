@@ -52,11 +52,11 @@ const Button: React.FC<IButtonType> = (props) => {
     });
     if (buttonType === ButtonType.Link) {
         return (
-            <a className={classes} {...restProps} href={link}>{children}</a>
+            <a role='link' className={classes} {...restProps} href={link}>{children}</a>
         )
     } else {
         return (
-            <button className={classes} {...restProps} disabled={disable}>{children}</button>
+            <button role='button' className={classes} {...restProps} disabled={disable}>{children}</button>
         )
     }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ClassNames from 'classnames'
 import closeImg from './img/close.png'
 export enum AlertType {
@@ -23,18 +23,24 @@ const Alert: React.FC<IAlertBase> = (props) => {
         description,
         close
     } = props
-
+    const [showAlert, onShowAlert] = useState(true)
     const classes = ClassNames('alert', {
         [`alert-${type}`]: type,
     })
+
     return (
-        <div className={classes}>
-            {(title && <div className="title">{title}</div>)}
-            {(description && <span className="description">{description}</span>)}
-            {(close && <div className="close">
-                <img src={closeImg} alt="" />
-            </div>)}
-        </div>
+        <>
+            {
+                showAlert && (<div role='alert' className={classes}>
+                    {(title && <div className="title">{title}</div>)}
+                    {(description && <span className="description">{description}</span>)}
+                    {(close && <div onClick={() => { onShowAlert(false) }} role='alert-close' className="close">
+                        <img src={closeImg} alt="" />
+                    </div>)}
+                </div>)
+            }
+        </>
+
     )
 }
 

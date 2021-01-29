@@ -24,9 +24,9 @@ function App() {
           <div>
             Alert
           </div>
-        <Alert type={AlertType.Success} title='百度title' description='百度description'></Alert>
+        <Alert type={AlertType.Success} title='百度title' close={true} description='百度description'></Alert>
         <Alert type={AlertType.Default} title='百度title' description='百度description'></Alert>
-        <Alert type={AlertType.Warning} title='百度title' description='百度description'></Alert>
+        <Alert type={AlertType.Warning} title='百度title' close={true} description='百度description'></Alert>
         <Alert type={AlertType.Danger} title='百度title' description='百度description'></Alert>
         <Alert type={AlertType.Info} title='百度title' close={true} description='百度description'></Alert>
         </p>
